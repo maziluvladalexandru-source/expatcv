@@ -8,6 +8,10 @@ const pwaConfig = withPWA({
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  experimental: {
+    serverComponentsExternalPackages: ["better-sqlite3", "@prisma/client", "prisma"],
+  },
+};
 
 export default pwaConfig(nextConfig);
