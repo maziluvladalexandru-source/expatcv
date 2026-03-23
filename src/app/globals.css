@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Hero background animations */
+@keyframes float-shape {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-30px) rotate(5deg); }
+  50% { transform: translateY(-15px) rotate(-3deg); }
+  75% { transform: translateY(-40px) rotate(2deg); }
+}
+
+@keyframes float-shape-reverse {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(25px) rotate(-4deg); }
+  50% { transform: translateY(10px) rotate(6deg); }
+  75% { transform: translateY(35px) rotate(-2deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(1.05); }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes grid-fade {
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.08; }
+}
+
+@keyframes drift-horizontal {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(40px) translateY(-20px); }
+}
+
+.hero-bg {
+  background: linear-gradient(160deg, #0a0f1e 0%, #0d1f3c 40%, #0a1628 70%, #0e1a35 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-fade 8s ease-in-out infinite;
+}
+
+.hero-shape {
+  position: absolute;
+  pointer-events: none;
+}
+
+.shape-circle {
+  border-radius: 50%;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  animation: float-shape 20s ease-in-out infinite;
+}
+
+.shape-hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: rgba(59, 130, 246, 0.06);
+  animation: float-shape-reverse 25s ease-in-out infinite;
+}
+
+.shape-triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: rgba(99, 102, 241, 0.06);
+  animation: float-shape 18s ease-in-out infinite;
+}
+
+.shape-ring {
+  border-radius: 50%;
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  animation: drift-horizontal 22s ease-in-out infinite;
+}
+
+.globe-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  animation: pulse-glow 10s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .globe-container {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.globe-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.globe-orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(59, 130, 246, 0.08);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate-slow 120s linear infinite;
+}
+
+.globe-orbit-reverse {
+  animation: rotate-slow 90s linear infinite reverse;
+}
+
+.globe-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.3);
+}
+
+.hero-radial {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+}
+
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(10, 15, 30, 0.6) 100%);
+}
+
+/* ===== Animated SVG Globe ===== */
+@keyframes globe-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes globe-pulse-dot {
+  0%, 100% { opacity: 1; r: 3.5; }
+  50% { opacity: 0.6; r: 5; }
+}
+
+@keyframes globe-pulse-ring {
+  0% { opacity: 0.4; r: 7; }
+  100% { opacity: 0; r: 18; }
+}
+
+.hero-globe-wrapper {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  opacity: 0.7;
+}
+
+.hero-globe-svg {
+  display: block;
+  filter: drop-shadow(0 0 40px rgba(56,189,248,0.15));
+}
+
+.globe-rotate {
+  transform-origin: 250px 250px;
+  animation: globe-spin 60s linear infinite;
+}
+
+.globe-pulse-dot {
+  animation: globe-pulse-dot 3s ease-in-out infinite;
+}
+
+.globe-pulse-ring {
+  animation: globe-pulse-ring 3s ease-in-out infinite;
+}
