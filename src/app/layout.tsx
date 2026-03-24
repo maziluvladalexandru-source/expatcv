@@ -14,14 +14,45 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ExpatCV - AI-Powered CV & Cover Letters for Expats in the Netherlands",
+  title: "ExpatCV - AI CV Rewriter for Expats in the Netherlands",
   description:
-    "Land your dream job in the Netherlands. AI-powered CV rewriting, cover letter generation, and LinkedIn optimization tailored for the Dutch & EU job market.",
+    "Struggling to get interviews in the Netherlands? ExpatCV rewrites your CV for the Dutch job market using AI. Cover letters and LinkedIn bio included.",
+  keywords: [
+    "expat CV",
+    "Netherlands CV",
+    "Dutch job market",
+    "AI CV rewriter",
+    "expat resume",
+    "cover letter Netherlands",
+    "LinkedIn optimization",
+    "Dutch CV format",
+    "expat jobs Netherlands",
+    "EU job market",
+  ],
+  authors: [{ name: "ExpatCV" }],
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
     title: "ExpatCV",
+  },
+  openGraph: {
+    title: "ExpatCV - AI CV Rewriter for Expats in the Netherlands",
+    description:
+      "Struggling to get interviews in the Netherlands? ExpatCV rewrites your CV for the Dutch job market using AI. Cover letters and LinkedIn bio included.",
+    type: "website",
+    locale: "en_US",
+    siteName: "ExpatCV",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ExpatCV - AI CV Rewriter for Expats in the Netherlands",
+    description:
+      "Struggling to get interviews in the Netherlands? ExpatCV rewrites your CV for the Dutch job market using AI. Cover letters and LinkedIn bio included.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
