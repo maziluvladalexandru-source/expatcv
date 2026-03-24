@@ -25,27 +25,27 @@ export default function UpgradePrompt({ used, limit }: { used: number; limit: nu
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 sm:p-6 mb-4 sm:mb-6">
-      <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
+    <div className="bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-xl p-4 sm:p-6 mb-4 sm:mb-6">
+      <h3 className="text-base sm:text-lg font-semibold text-white mb-1">
         You&apos;ve used {used} of {limit} generations this month
       </h3>
-      <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
+      <p className="text-gray-400 mb-3 sm:mb-4 text-sm sm:text-base">
         Upgrade your plan to unlock more AI-powered generations.
       </p>
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
         <button
           onClick={() => handleUpgrade("basic")}
           disabled={loading !== null}
-          className="px-4 py-2 bg-white border border-blue-300 text-blue-700 rounded-lg hover:bg-blue-50 transition text-sm font-medium disabled:opacity-50"
+          className="px-4 py-2 bg-gray-800 border border-gray-700 text-gray-300 rounded-lg hover:bg-gray-700 hover:text-white transition text-sm font-medium disabled:opacity-50"
         >
-          {loading === "basic" ? "Loading..." : "Basic - €9/mo (10 gen)"}
+          {loading === "basic" ? "Loading..." : "Basic - \u20AC9/mo (10 gen)"}
         </button>
         <button
           onClick={() => handleUpgrade("pro")}
           disabled={loading !== null}
           className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm font-medium disabled:opacity-50"
         >
-          {loading === "pro" ? "Loading..." : "Pro - €19/mo (Unlimited)"}
+          {loading === "pro" ? "Loading..." : "Pro - \u20AC19/mo (Unlimited)"}
         </button>
       </div>
     </div>

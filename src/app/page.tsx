@@ -16,7 +16,7 @@ const features = [
   {
     title: "Cover Letter Generator",
     description:
-      "Paste a job posting and your CV — get a compelling cover letter that follows Dutch business conventions and highlights your cross-cultural strengths.",
+      "Paste a job posting and your CV. Get a compelling cover letter that follows Dutch business conventions and highlights your cross-cultural strengths.",
     icon: "✉️",
   },
   {
@@ -32,15 +32,30 @@ const plans = [
     name: "Free",
     price: "€0",
     period: "",
-    features: ["3 AI generations/month", "CV rewriting", "Cover letters", "LinkedIn optimization"],
-    cta: "Get Started",
+    description: "Try it out, no commitment",
+    features: [
+      "3 AI generations per month",
+      "CV rewriting",
+      "Cover letter generation",
+      "LinkedIn bio optimization",
+    ],
+    excluded: ["Generation history", "PDF export", "Email support"],
+    cta: "Fix My CV Free",
     highlighted: false,
   },
   {
     name: "Basic",
     price: "€9",
     period: "/month",
-    features: ["10 AI generations/month", "CV rewriting", "Cover letters", "LinkedIn optimization", "Generation history"],
+    description: "For active job seekers",
+    features: [
+      "10 AI generations per month",
+      "CV rewriting",
+      "Cover letter generation",
+      "LinkedIn bio optimization",
+      "Full generation history",
+    ],
+    excluded: ["PDF export", "Email support"],
     cta: "Start Basic",
     highlighted: true,
   },
@@ -48,7 +63,17 @@ const plans = [
     name: "Pro",
     price: "€19",
     period: "/month",
-    features: ["Unlimited generations", "CV rewriting", "Cover letters", "LinkedIn optimization", "Generation history", "Export to PDF", "Email support"],
+    description: "Unlimited power for your job hunt",
+    features: [
+      "Unlimited AI generations",
+      "CV rewriting",
+      "Cover letter generation",
+      "LinkedIn bio optimization",
+      "Full generation history",
+      "Export to PDF",
+      "Email support",
+    ],
+    excluded: [],
     cta: "Go Pro",
     highlighted: false,
   },
@@ -56,7 +81,7 @@ const plans = [
 
 const testimonials = [
   {
-    quote: "I moved from Brazil to Amsterdam and had no idea how to format my CV for Dutch companies. ExpatCV rewrote it perfectly — I got 3 interviews in the first week!",
+    quote: "I moved from Brazil to Amsterdam and had no idea how to format my CV for Dutch companies. ExpatCV rewrote it perfectly. I got 3 interviews in the first week!",
     name: "Lucas M.",
     role: "Software Engineer, Amsterdam",
   },
@@ -79,9 +104,80 @@ const mobileHighlights = [
   { icon: "🇳🇱", label: "Dutch Market", desc: "EU format & keywords" },
 ];
 
+const dutchVsExpat = [
+  {
+    label: "CV format",
+    dutch: "1-2 pages, structured EU layout",
+    expat: "3+ pages, inconsistent formatting",
+  },
+  {
+    label: "Photo",
+    dutch: "No photo (most industries)",
+    expat: "Photo included or wrong placement",
+  },
+  {
+    label: "Keywords",
+    dutch: "Dutch ATS-optimized terms",
+    expat: "Generic or region-specific jargon",
+  },
+  {
+    label: "Personal summary",
+    dutch: "Concise, role-targeted opening",
+    expat: "Vague objective statement",
+  },
+  {
+    label: "Work experience",
+    dutch: "Achievements with metrics",
+    expat: "List of responsibilities",
+  },
+  {
+    label: "References",
+    dutch: "Available on request (not listed)",
+    expat: "Full references on CV",
+  },
+];
+
+const faqs = [
+  {
+    q: "Do I need to speak Dutch to use ExpatCV?",
+    a: "No. ExpatCV works entirely in English. Most international companies in the Netherlands hire in English, and our AI optimizes your CV for those roles. If you need a Dutch-language CV, you can specify that when rewriting.",
+  },
+  {
+    q: "What makes a Dutch CV different from my home country's CV?",
+    a: "Dutch CVs typically follow a specific EU format: no photo (for most industries), 1-2 pages max, structured sections, and specific keywords that Dutch ATS systems scan for. Many expat CVs get auto-rejected because they don't match this format.",
+  },
+  {
+    q: "Will my rewritten CV pass Dutch ATS systems?",
+    a: "Yes. Our AI specifically optimizes for the ATS software used by Dutch employers and recruiters, including proper formatting, keyword placement, and structure. This is one of the main reasons expats see more interview callbacks after using ExpatCV.",
+  },
+  {
+    q: "How is this different from ChatGPT or other AI tools?",
+    a: "Generic AI tools don't understand the Dutch job market. ExpatCV is specifically trained on Dutch hiring conventions, EU CV formats, and the unique challenges expats face. We know what Dutch recruiters look for. A generic AI prompt doesn't.",
+  },
+  {
+    q: "Can I cancel my subscription anytime?",
+    a: "Yes, absolutely. You can cancel anytime from your dashboard. Your access continues until the end of your billing period. No lock-in contracts, no cancellation fees.",
+  },
+  {
+    q: "I'm still in my home country but planning to move to the Netherlands. Can I use ExpatCV?",
+    a: "Definitely. Many of our users start optimizing their CV before arriving in NL. Having a Dutch-market-ready CV before you move gives you a huge head start on your job search.",
+  },
+];
+
+const comparisonRows = [
+  { label: "Time to get a Dutch-ready CV", expatcv: "30 seconds", manual: "5-10 hours of research", recruiter: "1-2 weeks" },
+  { label: "Cost", expatcv: "Free to €19/mo", manual: "Free (your time)", recruiter: "€200 to €500+" },
+  { label: "Dutch market knowledge", expatcv: "Built-in AI expertise", manual: "You need to learn it yourself", recruiter: "Varies by recruiter" },
+  { label: "ATS optimization", expatcv: "Automatic", manual: "Manual guesswork", recruiter: "Sometimes included" },
+  { label: "Cover letters included", expatcv: "Yes", manual: "Extra hours per letter", recruiter: "Usually not" },
+  { label: "LinkedIn optimization", expatcv: "Yes", manual: "Extra research needed", recruiter: "Rarely" },
+  { label: "Available 24/7", expatcv: "Yes", manual: "Depends on your energy", recruiter: "Business hours only" },
+];
+
 export default function LandingPage() {
   const [email, setEmail] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen bg-white">
@@ -187,8 +283,14 @@ export default function LandingPage() {
 
             {/* Desktop nav */}
             <div className="hidden sm:flex items-center gap-4">
+              <a href="#how-it-works" className="text-blue-200/70 hover:text-white text-sm transition">
+                How It Works
+              </a>
               <a href="#pricing" className="text-blue-200/70 hover:text-white text-sm transition">
                 Pricing
+              </a>
+              <a href="#faq" className="text-blue-200/70 hover:text-white text-sm transition">
+                FAQ
               </a>
               <Link
                 href="/auth"
@@ -211,14 +313,28 @@ export default function LandingPage() {
           </div>
 
           {/* Mobile slide-down menu */}
-          <div className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}>
+          <div className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}`}>
             <div className="px-4 pb-4 pt-2 flex flex-col gap-3 border-t border-white/10 bg-[#0a0f1e]/95 backdrop-blur-md">
+              <a
+                href="#how-it-works"
+                className="text-blue-200/70 hover:text-white text-sm transition py-1"
+                onClick={() => setMenuOpen(false)}
+              >
+                How It Works
+              </a>
               <a
                 href="#pricing"
                 className="text-blue-200/70 hover:text-white text-sm transition py-1"
                 onClick={() => setMenuOpen(false)}
               >
                 Pricing
+              </a>
+              <a
+                href="#faq"
+                className="text-blue-200/70 hover:text-white text-sm transition py-1"
+                onClick={() => setMenuOpen(false)}
+              >
+                FAQ
               </a>
               <Link
                 href="/auth"
@@ -237,17 +353,20 @@ export default function LandingPage() {
             {/* Left side - Text content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="inline-block mb-4 px-3 sm:px-4 py-1.5 bg-blue-500/10 text-blue-300 rounded-full text-xs sm:text-sm font-medium border border-blue-500/20 backdrop-blur-sm">
-                Stop getting rejected by Dutch ATS systems
+                100+ expats have fixed their CV with ExpatCV
               </div>
               <h1 className="text-[1.75rem] leading-[1.2] sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-6 sm:leading-tight drop-shadow-lg">
-                Your foreign CV doesn&apos;t work in the Netherlands.{" "}
+                Your CV is getting rejected by Dutch ATS systems.{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                  We fix that in 30 seconds.
+                  Fix it in 30 seconds.
                 </span>
               </h1>
-              <p className="text-sm sm:text-lg md:text-xl text-blue-100/60 mb-6 sm:mb-8 max-w-2xl leading-relaxed">
-                Dutch employers use ATS filters that silently reject non-EU formatted CVs.
-                ExpatCV rewrites your CV, cover letters, and LinkedIn for the Dutch job market so you actually get interviews.
+              <p className="text-sm sm:text-lg md:text-xl text-blue-100/60 mb-2 sm:mb-3 max-w-2xl leading-relaxed">
+                You&apos;re qualified. But Dutch ATS systems can&apos;t read your CV, so recruiters never see it.
+                ExpatCV rewrites your CV, cover letters, and LinkedIn for the Dutch market instantly.
+              </p>
+              <p className="text-xs sm:text-sm text-orange-300/80 mb-6 sm:mb-8 font-medium">
+                Stop missing out on jobs because of formatting.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 max-w-md lg:mx-0 mx-auto">
                 <input
@@ -261,7 +380,7 @@ export default function LandingPage() {
                   href={`/auth${email ? `?email=${encodeURIComponent(email)}` : ""}`}
                   className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-400 hover:to-blue-500 transition font-medium whitespace-nowrap text-center shadow-lg shadow-blue-500/25 border border-blue-400/30 text-sm sm:text-base"
                 >
-                  Get Started Free
+                  Fix My CV Free
                 </Link>
               </div>
               <p className="text-xs sm:text-sm text-blue-200/40 mt-3 lg:text-left text-center">
@@ -295,28 +414,134 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pain points bar */}
+      {/* Social proof bar */}
       <section className="bg-gray-900 py-6 sm:py-8">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-3 gap-3 sm:gap-8 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-8 text-center">
             <div>
-              <p className="text-xl sm:text-3xl font-bold text-white">75%</p>
-              <p className="text-gray-400 text-[10px] sm:text-sm mt-1">of expat CVs get auto-rejected by Dutch ATS</p>
-            </div>
-            <div>
-              <p className="text-xl sm:text-3xl font-bold text-white">6 sec</p>
-              <p className="text-gray-400 text-[10px] sm:text-sm mt-1">average recruiter time on your CV</p>
+              <p className="text-xl sm:text-3xl font-bold text-white">100+</p>
+              <p className="text-gray-400 text-[10px] sm:text-sm mt-1">expats have fixed their CV</p>
             </div>
             <div>
               <p className="text-xl sm:text-3xl font-bold text-white">3x</p>
-              <p className="text-gray-400 text-[10px] sm:text-sm mt-1">more interviews after NL reformatting</p>
+              <p className="text-gray-400 text-[10px] sm:text-sm mt-1">more interview callbacks</p>
+            </div>
+            <div>
+              <p className="text-xl sm:text-3xl font-bold text-white">30 sec</p>
+              <p className="text-gray-400 text-[10px] sm:text-sm mt-1">to rewrite your CV</p>
+            </div>
+            <div>
+              <p className="text-xl sm:text-3xl font-bold text-white">45+</p>
+              <p className="text-gray-400 text-[10px] sm:text-sm mt-1">nationalities served</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features */}
+      {/* How it works */}
+      <section id="how-it-works" className="py-12 sm:py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-3">
+            Get a Dutch-ready CV in 3 steps
+          </h2>
+          <p className="text-center text-gray-600 mb-8 sm:mb-12 text-sm sm:text-base max-w-2xl mx-auto">
+            No formatting headaches. No guessing what Dutch employers want. Just results.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-8 sm:gap-12">
+            {[
+              {
+                step: "1",
+                title: "Upload your CV",
+                desc: "Paste your current CV in any format or language. That's all you need to start.",
+                icon: "📤",
+              },
+              {
+                step: "2",
+                title: "AI rewrites it for the Dutch market",
+                desc: "Our AI reformats, optimizes keywords, and restructures everything to match what Dutch employers and ATS systems expect.",
+                icon: "🤖",
+              },
+              {
+                step: "3",
+                title: "Download and apply",
+                desc: "Get your polished, ATS-optimized CV and start applying to Dutch companies with confidence.",
+                icon: "🎯",
+              },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="text-4xl sm:text-5xl mb-3">{item.icon}</div>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mx-auto mb-3 sm:mb-4">
+                  {item.step}
+                </div>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm sm:text-base">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8 sm:mt-12">
+            <Link
+              href="/auth"
+              className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium shadow-lg shadow-blue-600/20 text-sm sm:text-base"
+            >
+              Fix My CV Free
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* What Dutch recruiters want vs what expats submit */}
       <section className="bg-gray-50 py-12 sm:py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-3">
+            What Dutch recruiters want vs. what expats submit
+          </h2>
+          <p className="text-center text-gray-600 mb-8 sm:mb-12 text-sm sm:text-base max-w-2xl mx-auto">
+            Most expat CVs get auto-rejected before a human ever reads them. Here is why.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr>
+                  <th className="text-left py-3 px-3 sm:px-4 text-gray-500 text-xs sm:text-sm font-medium" />
+                  <th className="py-3 px-3 sm:px-4 text-center">
+                    <div className="bg-green-600 text-white rounded-lg py-2 px-2 sm:px-4 font-bold text-sm sm:text-base">
+                      ✅ What Dutch recruiters want
+                    </div>
+                  </th>
+                  <th className="py-3 px-3 sm:px-4 text-center">
+                    <div className="bg-red-500 text-white rounded-lg py-2 px-2 sm:px-4 font-bold text-sm sm:text-base">
+                      ❌ What expats typically submit
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {dutchVsExpat.map((row, i) => (
+                  <tr key={row.label} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    <td className="py-3 px-3 sm:px-4 text-gray-700 font-medium text-xs sm:text-sm">{row.label}</td>
+                    <td className="py-3 px-3 sm:px-4 text-center text-green-700 font-medium text-xs sm:text-sm">{row.dutch}</td>
+                    <td className="py-3 px-3 sm:px-4 text-center text-red-600 text-xs sm:text-sm">{row.expat}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="text-center mt-8 sm:mt-10">
+            <p className="text-gray-700 font-medium mb-4 text-sm sm:text-base">
+              ExpatCV fixes all of this automatically. In 30 seconds.
+            </p>
+            <Link
+              href="/auth"
+              className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium shadow-lg shadow-blue-600/20 text-sm sm:text-base"
+            >
+              Fix My CV Free
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-12 sm:py-20">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
             Everything you need to stand out in the Dutch job market
@@ -338,32 +563,58 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* How it works */}
-      <section className="py-12 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
-            How it works
+      {/* Comparison table */}
+      <section className="bg-gray-50 py-12 sm:py-20">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-3">
+            Why expats choose ExpatCV
           </h2>
-          <div className="grid sm:grid-cols-3 gap-8">
-            {[
-              { step: "1", title: "Paste your content", desc: "Upload your CV, paste a job posting, or enter your LinkedIn bio." },
-              { step: "2", title: "AI does the magic", desc: "Our AI rewrites everything for the Dutch/EU job market — format, tone, keywords." },
-              { step: "3", title: "Download & apply", desc: "Copy your optimized content and start applying with confidence." },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mx-auto mb-3 sm:mb-4">
-                  {item.step}
-                </div>
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm sm:text-base">{item.desc}</p>
-              </div>
-            ))}
+          <p className="text-center text-gray-600 mb-8 sm:mb-12 text-sm sm:text-base">
+            See how we compare to doing it yourself or hiring a recruiter.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr>
+                  <th className="text-left py-3 px-3 sm:px-4 text-gray-500 text-xs sm:text-sm font-medium" />
+                  <th className="py-3 px-3 sm:px-4 text-center">
+                    <div className="bg-blue-600 text-white rounded-lg py-2 px-2 sm:px-4 font-bold text-sm sm:text-base">
+                      ExpatCV
+                    </div>
+                  </th>
+                  <th className="py-3 px-3 sm:px-4 text-center text-gray-700 font-semibold text-xs sm:text-sm">
+                    Do It Yourself
+                  </th>
+                  <th className="py-3 px-3 sm:px-4 text-center text-gray-700 font-semibold text-xs sm:text-sm">
+                    Hire a Recruiter
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row, i) => (
+                  <tr key={row.label} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    <td className="py-3 px-3 sm:px-4 text-gray-700 font-medium text-xs sm:text-sm">{row.label}</td>
+                    <td className="py-3 px-3 sm:px-4 text-center text-blue-700 font-semibold text-xs sm:text-sm">{row.expatcv}</td>
+                    <td className="py-3 px-3 sm:px-4 text-center text-gray-500 text-xs sm:text-sm">{row.manual}</td>
+                    <td className="py-3 px-3 sm:px-4 text-center text-gray-500 text-xs sm:text-sm">{row.recruiter}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="text-center mt-8 sm:mt-10">
+            <Link
+              href="/auth"
+              className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium shadow-lg shadow-blue-600/20 text-sm sm:text-base"
+            >
+              Fix My CV Free
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="bg-gray-50 py-12 sm:py-20">
+      <section className="py-12 sm:py-20">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
             Loved by expats across the Netherlands
@@ -371,6 +622,13 @@ export default function LandingPage() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((t) => (
               <div key={t.name} className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100">
+                <div className="flex gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
                 <p className="text-gray-700 mb-4 italic text-sm sm:text-base">&ldquo;{t.quote}&rdquo;</p>
                 <p className="font-semibold text-gray-900 text-sm sm:text-base">{t.name}</p>
                 <p className="text-xs sm:text-sm text-gray-500">{t.role}</p>
@@ -381,7 +639,7 @@ export default function LandingPage() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-12 sm:py-20">
+      <section id="pricing" className="bg-gray-50 py-12 sm:py-20">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
             Simple, transparent pricing
@@ -404,7 +662,8 @@ export default function LandingPage() {
                     Most Popular
                   </div>
                 )}
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{plan.name}</h3>
+                <p className="text-gray-500 text-xs sm:text-sm mb-3">{plan.description}</p>
                 <div className="mb-4 sm:mb-6">
                   <span className="text-3xl sm:text-4xl font-bold text-gray-900">{plan.price}</span>
                   <span className="text-gray-500">{plan.period}</span>
@@ -418,12 +677,20 @@ export default function LandingPage() {
                       {f}
                     </li>
                   ))}
+                  {plan.excluded.map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-gray-400 text-sm sm:text-base">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      {f}
+                    </li>
+                  ))}
                 </ul>
                 <Link
                   href="/auth"
                   className={`block text-center py-3 rounded-lg font-medium transition text-sm sm:text-base ${
                     plan.highlighted
-                      ? "bg-blue-600 text-white hover:bg-blue-700"
+                      ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-600/20"
                       : "bg-gray-100 text-gray-900 hover:bg-gray-200"
                   }`}
                 >
@@ -432,6 +699,64 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-12 sm:py-20">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
+            Frequently asked questions
+          </h2>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
+              <div key={i} className="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full flex items-center justify-between px-5 sm:px-6 py-4 text-left"
+                >
+                  <span className="font-semibold text-gray-900 text-sm sm:text-base pr-4">{faq.q}</span>
+                  <svg
+                    className={`w-5 h-5 text-gray-400 shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className={`overflow-hidden transition-all duration-200 ${openFaq === i ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
+                  <p className="px-5 sm:px-6 pb-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+                    {faq.a}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="hero-bg relative py-12 sm:py-20">
+        <div className="hero-grid" />
+        <div className="hero-radial" />
+        <div className="hero-vignette" />
+        <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl sm:text-4xl font-bold text-white mb-4">
+            Ready to land your next role in the Netherlands?
+          </h2>
+          <p className="text-blue-100/60 mb-6 sm:mb-8 text-sm sm:text-lg">
+            Join 100+ expats who stopped guessing and started getting interviews.
+          </p>
+          <Link
+            href="/auth"
+            className="inline-block px-8 py-3.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-400 hover:to-blue-500 transition font-medium shadow-lg shadow-blue-500/25 border border-blue-400/30 text-base sm:text-lg"
+          >
+            Fix My CV Free
+          </Link>
+          <p className="text-blue-200/40 mt-3 text-xs sm:text-sm">
+            No credit card required. Takes 30 seconds.
+          </p>
         </div>
       </section>
 
