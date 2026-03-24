@@ -763,6 +763,11 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-gray-100 py-6 sm:py-8">
         <div className="max-w-6xl mx-auto px-4 text-center text-gray-500 text-xs sm:text-sm">
+          <div className="flex justify-center gap-4 mb-2">
+            <Link href="/terms" className="hover:text-gray-700 transition">Terms of Service</Link>
+            <span>&middot;</span>
+            <Link href="/privacy" className="hover:text-gray-700 transition">Privacy Policy</Link>
+          </div>
           <p>&copy; {new Date().getFullYear()} ExpatCV. Built for expats, by expats.</p>
         </div>
       </footer>
