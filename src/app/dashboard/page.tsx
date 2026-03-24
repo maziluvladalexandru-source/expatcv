@@ -105,6 +105,21 @@ export default function DashboardPage() {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
+  const handleDeleteHistory = async (id: string) => {
+    try {
+      const res = await fetch("/api/generations", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id }),
+      });
+      if (res.ok) {
+        setHistory((prev) => prev.filter((item) => item.id !== id));
+      }
+    } catch {
+      // silently fail
+    }
+  };
+
   const handleDownloadHistory = (type: string, output: string, date: string) => {
     const blob = new Blob([output], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
@@ -304,6 +319,12 @@ export default function DashboardPage() {
                             className="text-xs text-gray-500 hover:text-gray-700 font-medium"
                           >
                             {expandedId === item.id ? "Collapse" : "View"}
+                          </button>
+                          <button
+                            onClick={() => handleDeleteHistory(item.id)}
+                            className="text-xs text-red-500 hover:text-red-700 font-medium"
+                          >
+                            Delete
                           </button>
                         </div>
                       </div>

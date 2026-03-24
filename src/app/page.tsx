@@ -48,7 +48,7 @@ const plans = [
     name: "Pro",
     price: "€19",
     period: "/month",
-    features: ["Unlimited generations", "CV rewriting", "Cover letters", "LinkedIn optimization", "Generation history", "Priority support"],
+    features: ["Unlimited generations", "CV rewriting", "Cover letters", "LinkedIn optimization", "Generation history", "Export to PDF"],
     cta: "Go Pro",
     highlighted: false,
   },

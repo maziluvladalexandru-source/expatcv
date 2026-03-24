@@ -28,13 +28,16 @@ export async function POST(req: NextRequest) {
       const session = event.data.object as Stripe.Checkout.Session;
       const userId = session.metadata?.userId;
       const plan = session.metadata?.plan;
+      const subscriptionId = session.subscription;
 
-      if (userId && plan) {
+      if (userId && plan && subscriptionId) {
         await prisma.user.update({
           where: { id: userId },
           data: {
             plan,
-            stripeSubscriptionId: session.subscription as string,
+            stripeSubscriptionId: typeof subscriptionId === "string"
+              ? subscriptionId
+              : subscriptionId.id,
           },
         });
       }

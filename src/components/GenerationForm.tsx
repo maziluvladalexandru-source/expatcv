@@ -102,6 +102,10 @@ export default function GenerationForm({ type, onUsageUpdate }: Props) {
       if (res.status === 429) {
         setStatus("limit");
         setLimitInfo({ used: data.used, limit: data.limit });
+        setToast({
+          message: "You have used all your generations this month. Upgrade to continue.",
+          type: "error",
+        });
         return;
       }
 
