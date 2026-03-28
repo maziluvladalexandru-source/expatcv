@@ -81,19 +81,14 @@ const plans = [
 
 const testimonials = [
   {
-    quote: "I moved from Brazil to Amsterdam and had no idea how to format my CV for Dutch companies. ExpatCV rewrote it perfectly. I got 3 interviews in the first week!",
-    name: "Lucas M.",
-    role: "Software Engineer, Amsterdam",
+    quote: "I sent out maybe 40 applications in Amsterdam with my Brazilian CV and heard nothing. Ran it through ExpatCV, changed nothing else, and got two interview invites that same week. I genuinely didn't realize how different the format needed to be.",
+    name: "Rafael S.",
+    role: "IT Engineer, Amsterdam",
   },
   {
-    quote: "The cover letter generator saved me hours. It knew exactly how to match my experience to Dutch job postings. Landed a role at a fintech in Rotterdam.",
-    name: "Priya K.",
-    role: "Product Manager, Rotterdam",
-  },
-  {
-    quote: "As an expat from Nigeria, I struggled with LinkedIn visibility in NL. After optimizing my bio with ExpatCV, recruiter messages doubled.",
-    name: "Chidi O.",
-    role: "Data Analyst, The Hague",
+    quote: "Moving from Lagos to Rotterdam was already stressful enough. ExpatCV took my nursing CV and turned it into something Dutch hospitals actually recognize. I got a call from Erasmus MC within days of applying.",
+    name: "Adaeze N.",
+    role: "Registered Nurse, Rotterdam",
   },
 ];
 
@@ -139,28 +134,24 @@ const dutchVsExpat = [
 
 const faqs = [
   {
-    q: "Do I need to speak Dutch to use ExpatCV?",
-    a: "No. ExpatCV works entirely in English. Most international companies in the Netherlands hire in English, and our AI optimizes your CV for those roles. If you need a Dutch-language CV, you can specify that when rewriting.",
+    q: "Do I need to speak Dutch to use this?",
+    a: "Not at all. The entire tool works in English, and most international employers in the Netherlands hire in English. If you do need a Dutch-language CV, you can request that during rewriting — but it's not required.",
   },
   {
-    q: "What makes a Dutch CV different from my home country's CV?",
-    a: "Dutch CVs typically follow a specific EU format: no photo (for most industries), 1-2 pages max, structured sections, and specific keywords that Dutch ATS systems scan for. Many expat CVs get auto-rejected because they don't match this format.",
+    q: "What makes Dutch CVs different?",
+    a: "Dutch CVs follow a strict EU format: typically 1-2 pages, no photo, a concise personal summary instead of an objective statement, and achievements with metrics rather than a list of duties. Dutch ATS systems also scan for specific keywords and formatting. If your CV doesn't match, it often gets filtered out before a human ever sees it.",
   },
   {
-    q: "Will my rewritten CV pass Dutch ATS systems?",
-    a: "Yes. Our AI specifically optimizes for the ATS software used by Dutch employers and recruiters, including proper formatting, keyword placement, and structure. This is one of the main reasons expats see more interview callbacks after using ExpatCV.",
+    q: "How does the AI know what Dutch employers want?",
+    a: "Our AI is trained specifically on Dutch hiring conventions, recruiter preferences, and the ATS systems used across the Netherlands. It's not a generic rewriter — it understands the difference between what works in your home country and what gets callbacks in the Dutch market.",
   },
   {
-    q: "How is this different from ChatGPT or other AI tools?",
-    a: "Generic AI tools don't understand the Dutch job market. ExpatCV is specifically trained on Dutch hiring conventions, EU CV formats, and the unique challenges expats face. We know what Dutch recruiters look for. A generic AI prompt doesn't.",
+    q: "Can I cancel anytime?",
+    a: "Yes. Cancel from your dashboard whenever you want. Your access stays active until the end of your billing period. No lock-in, no cancellation fees, no hassle.",
   },
   {
-    q: "Can I cancel my subscription anytime?",
-    a: "Yes, absolutely. You can cancel anytime from your dashboard. Your access continues until the end of your billing period. No lock-in contracts, no cancellation fees.",
-  },
-  {
-    q: "I'm still in my home country but planning to move to the Netherlands. Can I use ExpatCV?",
-    a: "Definitely. Many of our users start optimizing their CV before arriving in NL. Having a Dutch-market-ready CV before you move gives you a huge head start on your job search.",
+    q: "What if the generated CV doesn't feel right?",
+    a: "You can regenerate as many times as your plan allows, tweaking the input each time. The AI gives you a strong starting point optimized for the Dutch market, but you're always in control of the final result. Think of it as a first draft from someone who knows exactly what Dutch recruiters want.",
   },
 ];
 
@@ -292,6 +283,9 @@ export default function LandingPage() {
               <a href="#faq" className="text-blue-200/70 hover:text-white text-sm transition">
                 FAQ
               </a>
+              <Link href="/blog" className="text-blue-200/70 hover:text-white text-sm transition">
+                Blog
+              </Link>
               <Link
                 href="/auth"
                 className="text-sm bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 transition border border-blue-400/30"
@@ -337,6 +331,13 @@ export default function LandingPage() {
                 FAQ
               </a>
               <Link
+                href="/blog"
+                className="text-blue-200/70 hover:text-white text-sm transition py-1"
+                onClick={() => setMenuOpen(false)}
+              >
+                Blog
+              </Link>
+              <Link
                 href="/auth"
                 className="text-sm bg-blue-500 text-white px-4 py-2.5 rounded-lg hover:bg-blue-400 transition border border-blue-400/30 text-center"
                 onClick={() => setMenuOpen(false)}
@@ -356,17 +357,16 @@ export default function LandingPage() {
                 100+ expats have fixed their CV with ExpatCV
               </div>
               <h1 className="text-[1.75rem] leading-[1.2] sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-6 sm:leading-tight drop-shadow-lg">
-                Your CV is getting rejected by Dutch ATS systems.{" "}
+                Dutch employers are ignoring your CV.{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                  Fix it in 30 seconds.
+                  Not because you&apos;re unqualified.
                 </span>
               </h1>
               <p className="text-sm sm:text-lg md:text-xl text-blue-100/60 mb-2 sm:mb-3 max-w-2xl leading-relaxed">
-                You&apos;re qualified. But Dutch ATS systems can&apos;t read your CV, so recruiters never see it.
-                ExpatCV rewrites your CV, cover letters, and LinkedIn for the Dutch market instantly.
+                Your experience is real — but your CV format isn&apos;t. Dutch ATS systems reject it before a recruiter ever sees your name. ExpatCV rewrites it in 30 seconds.
               </p>
               <p className="text-xs sm:text-sm text-orange-300/80 mb-6 sm:mb-8 font-medium">
-                Stop missing out on jobs because of formatting.
+                Same qualifications. Right format. More interviews.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 max-w-md lg:mx-0 mx-auto">
                 <input
@@ -451,21 +451,21 @@ export default function LandingPage() {
             {[
               {
                 step: "1",
-                title: "Upload your CV",
-                desc: "Paste your current CV in any format or language. That's all you need to start.",
+                title: "Upload or paste your CV",
+                desc: "Drop in your current CV — any format, any language. No templates to fill out.",
                 icon: "📤",
               },
               {
                 step: "2",
-                title: "AI rewrites it for the Dutch market",
-                desc: "Our AI reformats, optimizes keywords, and restructures everything to match what Dutch employers and ATS systems expect.",
-                icon: "🤖",
+                title: "Tell us the job you want",
+                desc: "Paste a job posting or describe the role. Our AI tailors your CV to match what that employer is looking for.",
+                icon: "🎯",
               },
               {
                 step: "3",
-                title: "Download and apply",
-                desc: "Get your polished, ATS-optimized CV and start applying to Dutch companies with confidence.",
-                icon: "🎯",
+                title: "Get your Dutch-optimized CV in seconds",
+                desc: "Receive a polished, ATS-ready CV formatted for the Dutch market. Download it and start applying.",
+                icon: "🚀",
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
@@ -619,7 +619,7 @@ export default function LandingPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
             Loved by expats across the Netherlands
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {testimonials.map((t) => (
               <div key={t.name} className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100">
                 <div className="flex gap-1 mb-3">
