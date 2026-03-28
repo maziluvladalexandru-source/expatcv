@@ -25,7 +25,7 @@ const articles = [
     slug: "dutch-cv-format",
     title: "How to Write a Dutch CV Format That Gets Interviews",
     excerpt:
-      "Photo or no photo? One page or two? Learn exactly what Dutch employers expect from your CV — and how to format it so recruiters actually read it.",
+      "Photo or no photo? One page or two? Learn exactly what Dutch employers expect from your CV - and how to format it so recruiters actually read it.",
     date: "2026-03-25",
     readTime: "8 min read",
   },
@@ -41,7 +41,7 @@ const articles = [
     slug: "expat-cv-mistakes-netherlands",
     title: "Top 10 Mistakes Expats Make on Their CV in the Netherlands",
     excerpt:
-      "From including your date of birth to writing three-page CVs — these are the errors that get expat CVs rejected in the Netherlands.",
+      "From including your date of birth to writing three-page CVs - these are the errors that get expat CVs rejected in the Netherlands.",
     date: "2026-03-18",
     readTime: "10 min read",
   },
@@ -57,7 +57,7 @@ const articles = [
     slug: "career-gap-cv-expat",
     title: "How to Explain Career Gaps on Your CV (Expat Edition)",
     excerpt:
-      "Relocated countries? Took time to learn the language? Career gaps are common for expats — here's how to present them without hurting your chances.",
+      "Relocated countries? Took time to learn the language? Career gaps are common for expats - here's how to present them without hurting your chances.",
     date: "2026-03-10",
     readTime: "8 min read",
   },

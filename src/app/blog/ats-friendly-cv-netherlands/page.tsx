@@ -85,7 +85,7 @@ export default function ATSFriendlyCVArticle() {
           <p className="text-base sm:text-lg text-gray-800">
             You spent hours perfecting your CV. You applied to 30 jobs in Amsterdam, Rotterdam, or The Hague. And
             you heard... nothing. Not even a rejection email. What happened? There&apos;s a good chance your CV never
-            reached a human. It was filtered out by an <strong>ATS</strong> — an Applicant Tracking System.
+            reached a human. It was filtered out by an <strong>ATS</strong> - an Applicant Tracking System.
           </p>
 
           <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-8 mb-3">
@@ -111,7 +111,7 @@ export default function ATSFriendlyCVArticle() {
             (uitzendbureaus) use them.
           </p>
           <p>
-            If your CV isn&apos;t <strong>ATS-friendly</strong>, it might score a 0% match — even if you&apos;re
+            If your CV isn&apos;t <strong>ATS-friendly</strong>, it might score a 0% match - even if you&apos;re
             perfectly qualified. The recruiter never sees it. You never hear back. You assume the Dutch job market
             is impossible. Sound familiar?
           </p>
@@ -131,7 +131,7 @@ export default function ATSFriendlyCVArticle() {
             <li><strong>Keywords:</strong> Specific terms from the job description</li>
           </ul>
           <p>
-            When the ATS can&apos;t parse your CV correctly, your information ends up in the wrong fields — or gets
+            When the ATS can&apos;t parse your CV correctly, your information ends up in the wrong fields - or gets
             lost entirely. This happens more often than you&apos;d think, especially with creative CV templates.
           </p>
 
@@ -144,7 +144,7 @@ export default function ATSFriendlyCVArticle() {
           </h3>
           <p>
             Two-column layouts, sidebars, and text boxes confuse most ATS systems. Stick to a single-column format
-            with clear section headings. It might look less &quot;designed,&quot; but it gets parsed correctly —
+            with clear section headings. It might look less &quot;designed,&quot; but it gets parsed correctly -
             which is what actually matters.
           </p>
 
@@ -180,7 +180,7 @@ export default function ATSFriendlyCVArticle() {
           <p>
             This is the single most important ATS tip. Read the job description carefully and use the same terms
             in your CV. If the job says &quot;project management,&quot; don&apos;t write &quot;project
-            coordination.&quot; If it says &quot;Python,&quot; write &quot;Python&quot; — not &quot;programming.&quot;
+            coordination.&quot; If it says &quot;Python,&quot; write &quot;Python&quot; - not &quot;programming.&quot;
           </p>
           <p>
             For Dutch job postings, pay attention to both English and Dutch keywords. Some roles use mixed language:
@@ -201,7 +201,7 @@ export default function ATSFriendlyCVArticle() {
           </h3>
           <p>
             Use &quot;January 2023 - Present&quot; or &quot;01/2023 - Present.&quot; Don&apos;t use just years
-            (&quot;2023 - 2025&quot;) for recent roles — it looks like you&apos;re hiding short tenures. Be
+            (&quot;2023 - 2025&quot;) for recent roles - it looks like you&apos;re hiding short tenures. Be
             consistent with your format throughout the CV.
           </p>
 
@@ -269,7 +269,7 @@ export default function ATSFriendlyCVArticle() {
             </li>
           </ul>
           <p>
-            This is why adapting your CV for the Dutch market isn&apos;t just nice to have — it&apos;s essential.
+            This is why adapting your CV for the Dutch market isn&apos;t just nice to have - it&apos;s essential.
             An <strong>ATS-friendly CV</strong> tailored to the <strong>Netherlands</strong> job market gives you
             a fighting chance to actually reach a human recruiter.
           </p>
@@ -283,7 +283,7 @@ export default function ATSFriendlyCVArticle() {
         {/* CTA Banner */}
         <div className="mt-12 sm:mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 sm:p-10 text-center">
           <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
-            Rewrite your CV for the Dutch market in 60 seconds — free
+            Rewrite your CV for the Dutch market in 60 seconds - free
           </h3>
           <p className="text-blue-100/80 mb-6 text-sm sm:text-base max-w-xl mx-auto">
             ExpatCV uses AI to reformat and optimize your CV for Dutch employers and ATS systems. No signup needed to try it.

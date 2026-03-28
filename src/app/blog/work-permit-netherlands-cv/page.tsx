@@ -84,7 +84,7 @@ export default function WorkPermitCVArticle() {
         <div className="prose prose-gray max-w-none text-gray-700 text-sm sm:text-base leading-relaxed space-y-6">
           <p className="text-base sm:text-lg text-gray-800">
             One of the most confusing parts of job hunting in the Netherlands as an expat is figuring out what
-            legal information belongs on your CV — and what doesn&apos;t. Should you mention your work permit?
+            legal information belongs on your CV - and what doesn&apos;t. Should you mention your work permit?
             Your BSN number? Your visa type? The 30% ruling? Let&apos;s clear this up once and for all.
           </p>
 
@@ -101,7 +101,7 @@ export default function WorkPermitCVArticle() {
           </p>
           <p>
             Your BSN is sensitive personal data protected under GDPR. No employer needs your BSN to evaluate
-            your application. They&apos;ll collect it later during the official hiring process — when they need
+            your application. They&apos;ll collect it later during the official hiring process - when they need
             it for payroll and tax registration. Putting your BSN on a CV that gets emailed around to recruiters
             and HR departments is a data security risk.
           </p>
@@ -114,7 +114,7 @@ export default function WorkPermitCVArticle() {
             Work Permits: What Employers Actually Need to Know
           </h2>
           <p>
-            Here&apos;s the reality: Dutch employers need to know one thing about your legal status —
+            Here&apos;s the reality: Dutch employers need to know one thing about your legal status -
             <strong>can you legally work in the Netherlands?</strong> That&apos;s it. They don&apos;t need the
             details of your visa type, permit number, or immigration history on your CV.
           </p>
@@ -134,8 +134,8 @@ export default function WorkPermitCVArticle() {
             You have automatic right to work in the Netherlands. You can mention this simply:
           </p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>&quot;EU citizen — no work permit required&quot;</li>
-            <li>&quot;Nationality: [EU country] — authorized to work in the Netherlands&quot;</li>
+            <li>&quot;EU citizen - no work permit required&quot;</li>
+            <li>&quot;Nationality: [EU country] - authorized to work in the Netherlands&quot;</li>
           </ul>
           <p>
             This removes any doubt immediately. It&apos;s a small line but it can make a big difference,
@@ -149,8 +149,8 @@ export default function WorkPermitCVArticle() {
             Mention that you&apos;re authorized to work, without going into visa specifics:
           </p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>&quot;Valid work permit — authorized to work in the Netherlands&quot;</li>
-            <li>&quot;Residence permit holder — no sponsorship required&quot;</li>
+            <li>&quot;Valid work permit - authorized to work in the Netherlands&quot;</li>
+            <li>&quot;Residence permit holder - no sponsorship required&quot;</li>
           </ul>
           <p>
             The phrase &quot;no sponsorship required&quot; is particularly powerful because it tells employers
@@ -162,7 +162,7 @@ export default function WorkPermitCVArticle() {
             If you need sponsorship (e.g., Highly Skilled Migrant visa):
           </h3>
           <p>
-            Be honest but strategic. Don&apos;t lead with the visa requirement — lead with your value. Then
+            Be honest but strategic. Don&apos;t lead with the visa requirement - lead with your value. Then
             mention the visa situation briefly:
           </p>
           <ul className="list-disc pl-6 space-y-1">
@@ -181,7 +181,7 @@ export default function WorkPermitCVArticle() {
           </h2>
           <p>
             The 30% ruling (30%-regeling) is a Dutch tax benefit for highly skilled migrants recruited from
-            abroad. If you qualify, your employer can pay 30% of your salary tax-free — effectively a significant
+            abroad. If you qualify, your employer can pay 30% of your salary tax-free - effectively a significant
             pay increase. As of 2024, the ruling has been modified (it&apos;s now 30% for the first 20 months,
             then 20% and 10% in subsequent periods), but it&apos;s still very valuable.
           </p>
@@ -208,7 +208,7 @@ export default function WorkPermitCVArticle() {
           </ul>
           <p>
             If you&apos;re applying through a recruiter, mention your 30% ruling eligibility early in the
-            conversation. It&apos;s a selling point — both for you and for the company.
+            conversation. It&apos;s a selling point - both for you and for the company.
           </p>
 
           <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-8 mb-3">
@@ -228,7 +228,7 @@ export default function WorkPermitCVArticle() {
             <li>
               <strong>Date of birth:</strong> Many Dutch CVs include this. It&apos;s more common in traditional
               industries. In tech and startups, it&apos;s becoming less common. Include it if you&apos;re comfortable
-              with it — leave it out if you&apos;re not.
+              with it - leave it out if you&apos;re not.
             </li>
           </ul>
 
@@ -239,7 +239,7 @@ export default function WorkPermitCVArticle() {
             Don&apos;t put these on your CV, but be prepared to provide them during the hiring process:
           </p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>BSN:</strong> Required for payroll — provided after you accept an offer</li>
+            <li><strong>BSN:</strong> Required for payroll - provided after you accept an offer</li>
             <li><strong>Copy of passport or ID:</strong> For identity verification</li>
             <li><strong>Work permit or residence permit:</strong> If applicable, a copy for the employer&apos;s records</li>
             <li><strong>Diploma evaluations:</strong> Some regulated professions require Nuffic credential evaluation</li>
@@ -277,7 +277,7 @@ export default function WorkPermitCVArticle() {
             ruling, use it as a strategic advantage in your cover letter and salary negotiations.
           </p>
           <p>
-            The goal of your CV is to get an interview — not to submit your immigration paperwork. Keep it professional,
+            The goal of your CV is to get an interview - not to submit your immigration paperwork. Keep it professional,
             keep it relevant, and let the legal details come later.
           </p>
         </div>
@@ -285,7 +285,7 @@ export default function WorkPermitCVArticle() {
         {/* CTA Banner */}
         <div className="mt-12 sm:mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 sm:p-10 text-center">
           <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
-            Rewrite your CV for the Dutch market in 60 seconds — free
+            Rewrite your CV for the Dutch market in 60 seconds - free
           </h3>
           <p className="text-blue-100/80 mb-6 text-sm sm:text-base max-w-xl mx-auto">
             ExpatCV uses AI to reformat and optimize your CV for Dutch employers and ATS systems. No signup needed to try it.

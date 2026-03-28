@@ -84,12 +84,12 @@ export default function DutchCVFormatArticle() {
         <div className="prose prose-gray max-w-none text-gray-700 text-sm sm:text-base leading-relaxed space-y-6">
           <p className="text-base sm:text-lg text-gray-800">
             You moved to the Netherlands with years of experience, solid skills, and a CV that worked perfectly in your
-            home country. But here? Silence. No callbacks. No interviews. The problem isn&apos;t your experience — it&apos;s
+            home country. But here? Silence. No callbacks. No interviews. The problem isn&apos;t your experience - it&apos;s
             your <strong>Dutch CV format</strong>.
           </p>
           <p>
             The Netherlands has specific expectations for how a CV should look, what it should include, and how long it
-            should be. If your CV doesn&apos;t follow these rules, Dutch recruiters might skip it in seconds — even if
+            should be. If your CV doesn&apos;t follow these rules, Dutch recruiters might skip it in seconds - even if
             you&apos;re a perfect fit for the role. Let&apos;s fix that.
           </p>
 
@@ -127,7 +127,7 @@ export default function DutchCVFormatArticle() {
           </p>
           <ul className="list-disc pl-6 space-y-2">
             <li>A professional headshot (not a selfie, not a cropped group photo)</li>
-            <li>Recent — taken within the last 1-2 years</li>
+            <li>Recent - taken within the last 1-2 years</li>
             <li>Neutral background, good lighting</li>
             <li>Business casual dress (no need for a suit unless you&apos;re in finance or law)</li>
           </ul>
@@ -144,36 +144,36 @@ export default function DutchCVFormatArticle() {
           </p>
           <ol className="list-decimal pl-6 space-y-3">
             <li>
-              <strong>Personal details</strong> — Full name, phone number, email, city (not full address), LinkedIn URL.
+              <strong>Personal details</strong> - Full name, phone number, email, city (not full address), LinkedIn URL.
               Date of birth and nationality are optional but still common in the Netherlands. Do not include your BSN number.
             </li>
             <li>
-              <strong>Personal profile / summary</strong> — 3-4 sentences about who you are professionally. This is your
+              <strong>Personal profile / summary</strong> - 3-4 sentences about who you are professionally. This is your
               elevator pitch. Mention your years of experience, key skills, and what you&apos;re looking for. Example:
               &quot;Marketing professional with 8 years of experience in digital campaigns and brand strategy. Relocated to
               Amsterdam and looking to bring international perspective to a growing Dutch company.&quot;
             </li>
             <li>
-              <strong>Work experience</strong> — Most recent first. For each role: job title, company name, dates, and
+              <strong>Work experience</strong> - Most recent first. For each role: job title, company name, dates, and
               3-5 bullet points focused on achievements. Use numbers when possible: &quot;Increased conversion rate by 23%&quot;
               is much better than &quot;Responsible for improving conversions.&quot;
             </li>
             <li>
-              <strong>Education</strong> — Degree, institution, year of graduation. If you studied outside the Netherlands,
+              <strong>Education</strong> - Degree, institution, year of graduation. If you studied outside the Netherlands,
               briefly mention the country. You can add a one-line note about what your degree is equivalent to in the Dutch
               system (e.g., &quot;Equivalent to HBO/WO level&quot;).
             </li>
             <li>
-              <strong>Skills</strong> — Technical skills, software, tools. Keep it relevant to the job. Don&apos;t list
+              <strong>Skills</strong> - Technical skills, software, tools. Keep it relevant to the job. Don&apos;t list
               &quot;Microsoft Word&quot; unless you&apos;re applying for an admin role.
             </li>
             <li>
-              <strong>Languages</strong> — This is more important in the Netherlands than in many countries. List each
-              language with your level (Native, Fluent, Professional, Basic). If you&apos;re learning Dutch, include it —
-              even &quot;Dutch (A2 — currently studying)&quot; shows effort and is appreciated.
+              <strong>Languages</strong> - This is more important in the Netherlands than in many countries. List each
+              language with your level (Native, Fluent, Professional, Basic). If you&apos;re learning Dutch, include it -
+              even &quot;Dutch (A2 - currently studying)&quot; shows effort and is appreciated.
             </li>
             <li>
-              <strong>Certifications and courses</strong> — Optional, but useful if you have relevant ones.
+              <strong>Certifications and courses</strong> - Optional, but useful if you have relevant ones.
             </li>
           </ol>
 
@@ -210,9 +210,9 @@ export default function DutchCVFormatArticle() {
             <li>Use a clean, modern font like Calibri, Arial, or Helvetica. No Comic Sans, no fancy script fonts.</li>
             <li>Keep font size between 10-12pt for body text.</li>
             <li>Use clear section headings with consistent formatting.</li>
-            <li>White space is your friend — don&apos;t cram everything together.</li>
+            <li>White space is your friend - don&apos;t cram everything together.</li>
             <li>Save and send as PDF (unless the job ad specifically asks for Word format).</li>
-            <li>Name your file professionally: &quot;CV_YourName_2026.pdf&quot; — not &quot;document(3).docx&quot;.</li>
+            <li>Name your file professionally: &quot;CV_YourName_2026.pdf&quot; - not &quot;document(3).docx&quot;.</li>
           </ul>
 
           <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-8 mb-3">
@@ -225,7 +225,7 @@ export default function DutchCVFormatArticle() {
             <li>Using a US-style one-page resume with no personal details</li>
             <li>Including a full home address (city is enough)</li>
             <li>Writing in the third person (&quot;John is a motivated professional...&quot;)</li>
-            <li>Listing every job since university — focus on the last 10-15 years</li>
+            <li>Listing every job since university - focus on the last 10-15 years</li>
             <li>Using fancy templates with graphics that confuse ATS software</li>
             <li>Forgetting to mention language skills</li>
           </ul>
@@ -254,7 +254,7 @@ export default function DutchCVFormatArticle() {
         {/* CTA Banner */}
         <div className="mt-12 sm:mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 sm:p-10 text-center">
           <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
-            Rewrite your CV for the Dutch market in 60 seconds — free
+            Rewrite your CV for the Dutch market in 60 seconds - free
           </h3>
           <p className="text-blue-100/80 mb-6 text-sm sm:text-base max-w-xl mx-auto">
             ExpatCV uses AI to reformat and optimize your CV for Dutch employers and ATS systems. No signup needed to try it.

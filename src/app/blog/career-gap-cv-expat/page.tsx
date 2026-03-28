@@ -84,7 +84,7 @@ export default function CareerGapArticle() {
         <div className="prose prose-gray max-w-none text-gray-700 text-sm sm:text-base leading-relaxed space-y-6">
           <p className="text-base sm:text-lg text-gray-800">
             You moved to a new country. You dealt with visas, housing, language barriers, and culture shock. Of
-            course there&apos;s a gap on your CV. As an expat, <strong>career gaps</strong> are not just common —
+            course there&apos;s a gap on your CV. As an expat, <strong>career gaps</strong> are not just common -
             they&apos;re almost inevitable. The good news? Dutch employers are more understanding about gaps than
             you might think. The key is knowing how to explain them.
           </p>
@@ -97,7 +97,7 @@ export default function CareerGapArticle() {
             expats have breaks in their employment history:
           </p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>International relocation:</strong> Moving countries takes time — finding housing, getting registered at the gemeente, opening a bank account, sorting out insurance, getting your BSN</li>
+            <li><strong>International relocation:</strong> Moving countries takes time - finding housing, getting registered at the gemeente, opening a bank account, sorting out insurance, getting your BSN</li>
             <li><strong>Visa and work permit processing:</strong> Waiting for your residence permit or work authorization can take weeks or months</li>
             <li><strong>Language study:</strong> Taking Dutch courses (inburgering or otherwise) to improve your employability</li>
             <li><strong>Job search in a new market:</strong> Learning how the Dutch job market works, networking, adapting your CV</li>
@@ -108,7 +108,7 @@ export default function CareerGapArticle() {
           </ul>
           <p>
             All of these are completely valid. The trick is presenting them in a way that shows you were productive
-            and intentional during the gap — not that you were sitting idle.
+            and intentional during the gap - not that you were sitting idle.
           </p>
 
           <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-8 mb-3">
@@ -121,7 +121,7 @@ export default function CareerGapArticle() {
           </p>
           <p>
             That said, recruiters will still notice gaps and want to understand them. An unexplained gap of 6+
-            months will raise questions. The goal isn&apos;t to hide the gap — it&apos;s to frame it honestly
+            months will raise questions. The goal isn&apos;t to hide the gap - it&apos;s to frame it honestly
             and positively.
           </p>
 
@@ -141,7 +141,7 @@ export default function CareerGapArticle() {
           </p>
           <div className="bg-gray-50 rounded-lg p-4 sm:p-6 border border-gray-200">
             <p className="font-semibold text-gray-900 mb-1">International Relocation & Career Transition</p>
-            <p className="text-gray-500 text-sm mb-2">June 2025 — December 2025 | Amsterdam, Netherlands</p>
+            <p className="text-gray-500 text-sm mb-2">June 2025 - December 2025 | Amsterdam, Netherlands</p>
             <ul className="list-disc pl-6 space-y-1 text-sm">
               <li>Relocated from S&atilde;o Paulo to Amsterdam; completed Dutch civic integration requirements</li>
               <li>Completed A2-level Dutch language course at a language school</li>
@@ -209,7 +209,7 @@ export default function CareerGapArticle() {
             Relocation gap (3-12 months)
           </h3>
           <p>
-            <strong>Frame it as:</strong> &quot;International Relocation to the Netherlands&quot; — mention
+            <strong>Frame it as:</strong> &quot;International Relocation to the Netherlands&quot; - mention
             language study, credential evaluation, networking, and any courses taken.
           </p>
 
@@ -217,7 +217,7 @@ export default function CareerGapArticle() {
             Waiting for work permit
           </h3>
           <p>
-            <strong>Frame it as:</strong> &quot;Career Transition Period&quot; — emphasize what you did while
+            <strong>Frame it as:</strong> &quot;Career Transition Period&quot; - emphasize what you did while
             waiting: online courses, volunteering, freelance projects, language study.
           </p>
 
@@ -225,7 +225,7 @@ export default function CareerGapArticle() {
             Following a partner
           </h3>
           <p>
-            <strong>Frame it as:</strong> &quot;International relocation&quot; — you don&apos;t need to explain
+            <strong>Frame it as:</strong> &quot;International relocation&quot; - you don&apos;t need to explain
             that you moved for your partner. Focus on what you did to prepare for the Dutch job market.
           </p>
 
@@ -233,7 +233,7 @@ export default function CareerGapArticle() {
             Language study (full-time Dutch courses)
           </h3>
           <p>
-            <strong>Frame it as:</strong> &quot;Full-time Dutch Language Training&quot; — this is genuinely
+            <strong>Frame it as:</strong> &quot;Full-time Dutch Language Training&quot; - this is genuinely
             impressive. Dutch is not easy, and employers respect the commitment. Mention the level achieved
             (A2, B1, etc.) and the institution.
           </p>
@@ -242,7 +242,7 @@ export default function CareerGapArticle() {
             Parental leave
           </h3>
           <p>
-            <strong>Frame it as:</strong> &quot;Parental Leave&quot; — in the Netherlands, parental leave is
+            <strong>Frame it as:</strong> &quot;Parental Leave&quot; - in the Netherlands, parental leave is
             respected and normalized. You don&apos;t need to apologize for it. A simple mention is enough.
           </p>
 
@@ -262,7 +262,7 @@ export default function CareerGapArticle() {
             <li>
               <strong>Don&apos;t lie or make up jobs.</strong> Fabricating employment is a serious issue in the
               Netherlands. Background checks are common, especially for professional roles. Getting caught means
-              instant rejection — and potential blacklisting.
+              instant rejection - and potential blacklisting.
             </li>
             <li>
               <strong>Don&apos;t over-explain.</strong> A brief, confident explanation is better than a paragraph
@@ -275,7 +275,7 @@ export default function CareerGapArticle() {
             </li>
             <li>
               <strong>Don&apos;t leave gaps unexplained.</strong> An unexplained gap invites assumptions.
-              A brief explanation — even one line — is always better than silence.
+              A brief explanation - even one line - is always better than silence.
             </li>
           </ul>
 
@@ -304,11 +304,11 @@ export default function CareerGapArticle() {
           </h2>
           <p>
             <strong>Career gaps as an expat</strong> are not career killers. They&apos;re a normal part of the
-            international experience. Dutch employers understand this — they just want to see that you were
+            international experience. Dutch employers understand this - they just want to see that you were
             intentional about your time and that you&apos;re ready to contribute now.
           </p>
           <p>
-            Be honest, be brief, and focus on what you did — not on the time that passed. Frame your gap as a
+            Be honest, be brief, and focus on what you did - not on the time that passed. Frame your gap as a
             chapter of growth, not a hole in your history. And remember: moving to a new country and rebuilding
             your career from scratch is one of the most ambitious things a person can do. Don&apos;t sell
             yourself short.
@@ -318,7 +318,7 @@ export default function CareerGapArticle() {
         {/* CTA Banner */}
         <div className="mt-12 sm:mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 sm:p-10 text-center">
           <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
-            Rewrite your CV for the Dutch market in 60 seconds — free
+            Rewrite your CV for the Dutch market in 60 seconds - free
           </h3>
           <p className="text-blue-100/80 mb-6 text-sm sm:text-base max-w-xl mx-auto">
             ExpatCV uses AI to reformat and optimize your CV for Dutch employers and ATS systems. No signup needed to try it.

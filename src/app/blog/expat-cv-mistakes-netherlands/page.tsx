@@ -84,7 +84,7 @@ export default function ExpatCVMistakesArticle() {
         <div className="prose prose-gray max-w-none text-gray-700 text-sm sm:text-base leading-relaxed space-y-6">
           <p className="text-base sm:text-lg text-gray-800">
             Moving to the Netherlands is exciting. Job hunting in the Netherlands? Not so much. Especially when your
-            CV — which worked perfectly back home — is silently getting you rejected. After helping hundreds of expats
+            CV - which worked perfectly back home - is silently getting you rejected. After helping hundreds of expats
             rewrite their CVs for the Dutch job market, we&apos;ve seen the same mistakes come up again and again.
             Here are the top 10 <strong>expat CV mistakes in the Netherlands</strong> and how to fix them.
           </p>
@@ -94,7 +94,7 @@ export default function ExpatCVMistakesArticle() {
           </h2>
           <p>
             This is the biggest one. A one-page American resume, a multi-page Indian biodata, a UK-style CV with
-            no photo — none of these match what Dutch employers expect. The Netherlands has its own conventions:
+            no photo - none of these match what Dutch employers expect. The Netherlands has its own conventions:
             1-2 pages, professional photo, personal summary at the top, and a clear language section.
           </p>
           <p>
@@ -112,7 +112,7 @@ export default function ExpatCVMistakesArticle() {
           </p>
           <p>
             <strong>Fix:</strong> Add a professional headshot. Business casual, neutral background, good lighting.
-            It doesn&apos;t need to be studio-quality — a well-lit phone photo with a plain wall behind you works.
+            It doesn&apos;t need to be studio-quality - a well-lit phone photo with a plain wall behind you works.
           </p>
 
           <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-8 mb-3">
@@ -126,7 +126,7 @@ export default function ExpatCVMistakesArticle() {
           <p>
             <strong>Fix:</strong> Add a dedicated &quot;Languages&quot; section. List each language with your
             level: Native, Fluent, Professional working proficiency, or Basic. If you&apos;re learning Dutch,
-            include it: &quot;Dutch (A2 — currently in classes)&quot; shows effort and commitment.
+            include it: &quot;Dutch (A2 - currently in classes)&quot; shows effort and commitment.
           </p>
 
           <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-8 mb-3">
@@ -164,11 +164,11 @@ export default function ExpatCVMistakesArticle() {
           <p>
             Some countries expect your CV to include marital status, religion, number of children, or your
             parents&apos; names. In the Netherlands, this information is not expected and can feel inappropriate.
-            On the flip side, don&apos;t include your full home address either — just your city is enough.
+            On the flip side, don&apos;t include your full home address either - just your city is enough.
           </p>
           <p>
             <strong>Fix:</strong> Personal details should include: name, phone, email, city, LinkedIn URL.
-            Date of birth and nationality are optional but acceptable. Everything else — leave it out.
+            Date of birth and nationality are optional but acceptable. Everything else - leave it out.
           </p>
 
           <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-8 mb-3">
@@ -211,7 +211,7 @@ export default function ExpatCVMistakesArticle() {
           <p>
             <strong>Fix:</strong> Tailor your CV for each application. Adjust your personal summary to match the
             role. Reorder your skills to put the most relevant ones first. Mirror the language from the job
-            description. Yes, this takes more time — but 5 tailored applications beat 50 generic ones.
+            description. Yes, this takes more time - but 5 tailored applications beat 50 generic ones.
           </p>
 
           <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-8 mb-3">
@@ -219,7 +219,7 @@ export default function ExpatCVMistakesArticle() {
           </h2>
           <p>
             Some expats include their BSN (Burgerservicenummer), visa type, or work permit details directly on
-            their CV. While it&apos;s understandable — you want to show you can legally work in the Netherlands —
+            their CV. While it&apos;s understandable - you want to show you can legally work in the Netherlands -
             this information doesn&apos;t belong on your CV. It&apos;s sensitive personal data and it&apos;s
             handled during the hiring process, not the application stage.
           </p>
@@ -260,7 +260,7 @@ export default function ExpatCVMistakesArticle() {
         {/* CTA Banner */}
         <div className="mt-12 sm:mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 sm:p-10 text-center">
           <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
-            Rewrite your CV for the Dutch market in 60 seconds — free
+            Rewrite your CV for the Dutch market in 60 seconds - free
           </h3>
           <p className="text-blue-100/80 mb-6 text-sm sm:text-base max-w-xl mx-auto">
             ExpatCV uses AI to reformat and optimize your CV for Dutch employers and ATS systems. No signup needed to try it.
